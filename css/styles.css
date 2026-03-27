@@ -615,9 +615,7 @@ ul {
 }
 
 .experience-badge {
-    position: absolute;
-    bottom: -30px;
-    left: -30px;
+    position: relative;
     background: var(--glass-dark-bg);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -625,11 +623,15 @@ ul {
     padding: 30px;
     border-radius: 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 15px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(238, 160, 22, 0.2);
+    box-shadow: var(--shadow-heavy);
     border: 1px solid var(--glass-border);
     z-index: 2;
+    width: 100%;
+    margin-top: 10px;
 }
 
 .experience-badge h3 {
@@ -746,6 +748,7 @@ ul {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-image: url('assets/images/6.jpeg');
     z-index: 1;
 }
 
@@ -994,13 +997,40 @@ ul {
 }
 
 .contact-form-container {
-    padding: 60px;
-    background: var(--dark-surface);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 40px;
+    background: rgba(255,255,255,0.02);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.05);
+    box-shadow: var(--shadow-heavy);
 }
 
-.contact-form h3 {
-    font-size: 2rem;
+.contact-icon {
+    font-size: 3rem;
+    color: var(--gold-primary);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.contact-title {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+.contact-subtitle {
+    color: var(--text-muted);
     margin-bottom: 30px;
+}
+
+.contact-btn {
+    font-size: 1.1rem;
+    padding: 18px;
+    max-width: 300px;
 }
 
 .input-group {
