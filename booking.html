@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Luxury Car Rentals & Tours | Rukku Travels</title>
+    <meta name="description" content="Plan and book your premium travel experience in Tamil Nadu. Secure comfortable luxury AC cars, guided spiritual tours, and seamless packages from Dindigul.">
+    <meta name="keywords" content="rukku travels booking, book luxury car rental dindigul, spiritual tours from dindigul to madurai booking, book hill station tours tamil nadu">
+    <meta name="author" content="thalirxtech">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rukku-travels.com/booking.html">
+    <meta property="og:site_name" content="Rukku Travels">
+    <meta property="og:title" content="Book Luxury Car Rentals & Tours | Rukku Travels">
+    <meta property="og:description" content="Plan and book your premium travel experience in Tamil Nadu with Rukku Travels. safely and seamlessly.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://rukku-travels.com/assets/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .booking-section {
+            padding: 150px 0 100px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .booking-form-wrapper {
+            background: var(--dark-surface);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-heavy);
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+        }
+
+        .booking-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .booking-header h1 {
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        .booking-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .booking-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .input-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .input-group input,
+        .input-group textarea {
+            width: 100%;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: var(--white);
+            font-family: var(--font-body);
+            transition: var(--trans-fast);
+            font-size: 1rem;
+        }
+
+        .input-group input:focus,
+        .input-group textarea:focus {
+            outline: none;
+            border-color: var(--gold-primary);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 10px rgba(238, 160, 22, 0.1);
+        }
+
+        /* Style date picker icon area */
+        ::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+            opacity: 0.6;
+            cursor: pointer;
+        }
+
+        ::-webkit-calendar-picker-indicator:hover {
+            opacity: 1;
+        }
+
+        /* Remove number input spinners */
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .success-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--dark-surface);
+            border-radius: 20px;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .success-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .success-overlay i {
+            font-size: 4rem;
+            color: #25D366;
+            margin-bottom: 20px;
+        }
+
+        .success-overlay h2 {
+            color: var(--white);
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .success-overlay p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .btn-back {
+            background: transparent;
+            color: var(--gold-primary);
+            border: 1px solid var(--gold-primary);
+        }
+
+        .btn-back:hover {
+            background: var(--gold-primary);
+            color: var(--navy-dark);
+        }
+
+        @media (max-width: 768px) {
+            .booking-form {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-form-wrapper {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sparkles Container -->
+    <div id="sparkles-container"></div>
+
+    <!-- Header -->
+    <header class="header scrolled">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><img src="assets/images/logo.png" alt="RT Logo"></span>
+            </a>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About Us</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#packages" class="nav-link">Packages</a></li>
+                    <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <a href="booking.html" class="btn btn-primary btn-ripple" style="padding: 10px 20px;"> Book Your Travel</a>
+                <button class="mobile-toggle"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="booking-section">
+            <div class="container">
+                <div class="booking-form-wrapper">
+
+                    <div class="booking-header">
+                        <h1>Plan Your Journey</h1>
+                        <p>Fill out the details below and we will contact you immediately.</p>
+                    </div>
+
+                    <form id="bookingForm" class="booking-form">
+                        <div class="input-group">
+                            <label for="b_name">Full Name *</label>
+                            <input type="text" id="b_name" placeholder="E.g. John Doe" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="b_email">Email Address *</label>
+                            <input type="email" id="b_email" placeholder="E.g. john@example.com" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="b_phone">Phone Number *</label>
+                            <input type="tel" id="b_phone" placeholder="Your Phone Number" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="b_date">Travel Date *</label>
+                            <input type="date" id="b_date" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="b_adults">Adults *</label>
+                            <input type="number" id="b_adults" placeholder="Number of adults" min="1" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="b_children">Children</label>
+                            <input type="number" id="b_children" placeholder="Number of children" min="0" value="0">
+                        </div>
+                        <div class="input-group full-width">
+                            <label for="b_message">Message / Requirements</label>
+                            <textarea id="b_message" rows="4"
+                                placeholder="Tell us about your trip (destinations, vehicle preferences, etc.)"
+                                required></textarea>
+                        </div>
+
+                        <div class="input-group full-width" style="margin-top: 10px;">
+                            <button type="submit" class="btn btn-primary btn-full btn-ripple"
+                                style="font-size: 1.1rem; padding: 18px;">👉 Book Your Travel</button>
+                        </div>
+                    </form>
+
+                    <!-- Success Overlay -->
+                    <div class="success-overlay" id="successOverlay">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <h2>Booking Request Sent!</h2>
+                        <p>Your message was sent successfully.<br>Our team will contact you soon.<br>Thank you for
+                            booking.</p>
+                        <a href="index.html" class="btn btn-back mt-4">Return to Home</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content text-center">
+            <h3 class="footer-logo">Rukku Travels</h3>
+            <p>Your premium travel partner in Tamil Nadu.</p>
+            <div class="social-links mt-3">
+                <a href="https://www.instagram.com/rukkutravels_dindigul?igsh=MWUzM3dqNDk4Y2owMQ==" target="_blank"
+                    rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="footer-bottom mt-4">
+                <p>&copy; 2026 Rukku Travels. All Rights Reserved.<br>
+                    Crafted by
+                    <a href="https://thalirxstudio.netlify.app/" target="_blank" rel="noopener noreferrer">
+                        ThalirX Studio
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent default submission
+
+            // Collect input values
+            const name = document.getElementById('b_name').value.trim();
+            const email = document.getElementById('b_email').value.trim();
+            const phone = document.getElementById('b_phone').value.trim();
+            const date = document.getElementById('b_date').value.trim();
+            const adults = document.getElementById('b_adults').value.trim();
+            const children = document.getElementById('b_children').value.trim();
+            const message = document.getElementById('b_message').value.trim();
+
+            // Construct WhatsApp Message Structure
+            const waMessage = `Hello Rukku Travels,
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+
+Travel Date: ${date}
+
+People:
+Adult: ${adults}
+Child: ${children}
+
+Message: ${message}`;
+
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(waMessage);
+
+            // WhatsApp Web URL
+            const whatsappNumber = "916382494746";
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+            // Open WhatsApp
+            window.open(whatsappURL, "_blank");
+
+            // Show success overlay
+            document.getElementById('successOverlay').classList.add('active');
+
+            // Clear the form
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

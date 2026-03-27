@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Cottages in Kodaikanal with Car Rental | Rukku Travels</title>
+    <meta name="description" content="Book premium luxury cottages in Kodaikanal paired with seamless car rentals. Perfect for affluent families & couples. Discover hidden gems with local guides.">
+    <meta name="keywords" content="kodaikanal cottage booking, best cottages in kodaikanal with car rental, rukku travels, premium tour packages from chennai to kodaikanal, family tour packages kodaikanal">
+    <meta name="author" content="thalirxtech">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rukku-travels.com/kodaikanal-cottage.html">
+    <meta property="og:site_name" content="Rukku Travels">
+    <meta property="og:title" content="Best Cottages in Kodaikanal with Car Rental | Rukku Travels">
+    <meta property="og:description" content="Experience seamless luxury with our exclusive Kodaikanal car rental and cottage packages.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://rukku-travels.com/assets/images/Kodi/main.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .cottage-hero {
+            position: relative;
+            height: 450px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-main-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.7);
+        }
+
+        .hero-overlay-content {
+            position: absolute;
+            z-index: 2;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-overlay-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        .details-section {
+            padding: 80px 0;
+            background: var(--dark-bg);
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 50px;
+        }
+
+        .details-content h2 {
+            font-size: 2.2rem;
+            color: var(--white);
+            margin-bottom: 25px;
+        }
+
+        .details-content p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .info-card {
+            background: var(--dark-surface);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .info-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .info-item i {
+            font-size: 1.5rem;
+            color: var(--gold-primary);
+        }
+
+        .info-item h4 {
+            color: var(--white);
+            margin-bottom: 5px;
+        }
+
+        .info-item p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Carousel Styles */
+        .carousel-container {
+            width: 100%;
+            overflow: hidden;
+            margin: 50px 0;
+            position: relative;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px 0;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 20px;
+            width: max-content;
+            animation: slide 20s linear infinite;
+        }
+
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
+
+        .carousel-track img {
+            height: 250px;
+            width: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 2px solid rgba(255, 255, 255, 0.05);
+        }
+
+        @keyframes slide {
+            0%, 25% { transform: translateX(0); }
+            33%, 58% { transform: translateX(calc(-400px - 20px)); }
+            66%, 91% { transform: translateX(calc(-800px - 40px)); }
+            100% { transform: translateX(calc(-1200px - 60px)); }
+        }
+
+        .paradise-track {
+            animation: slideParadise 60s linear infinite;
+        }
+
+        .paradise-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes slideParadise {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-420px * 29)); }
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-overlay-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sparkles-container"></div>
+
+    <header class="header scrolled">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><img src="assets/images/logo.png" alt="RT Logo"></span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="available-cottages.html" class="nav-link active">Cottages</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#packages" class="nav-link">Packages</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <a href="cotagebooking.html" class="btn btn-primary btn-ripple">Book This Cottage</a>
+                <button class="mobile-toggle"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cottage-hero">
+            <img src="assets/images/Kodi/main.jpeg" alt="Kodaikanal Cottage" class="hero-main-img">
+            <div class="hero-overlay-content">
+                <span class="section-badge">Premium Experience</span>
+                <h1>Kodaikanal Cottage</h1>
+                <p>Misty mountains, premium stays, unforgettable memories.</p>
+            </div>
+        </section>
+
+        <section class="details-section">
+            <div class="container">
+                <div class="details-grid">
+                    <div class="details-content scroll-reveal-left">
+                        <h2>Experience Luxury in Nature</h2>
+                        <p>Our Kodaikanal cottage offers a perfect blend of modern comfort and natural beauty. Located in the heart of the misty mountains, it provides a peaceful escape from the hustle and bustle of city life.</p>
+                        <p>Whether you're planning a family vacation, a honeymoon, or a get-together with friends, our cottage is designed to cater to all your needs with premium amenities and breathtaking views.</p>
+                        
+                        <div class="convenience-tags mt-4">
+                            <span class="btn btn-outline btn-sm m-1"><i class="fa-solid fa-people-group"></i> Family Friendly</span>
+                            <span class="btn btn-outline btn-sm m-1"><i class="fa-solid fa-users"></i> Large Groups</span>
+                            <span class="btn btn-outline btn-sm m-1"><i class="fa-solid fa-fire"></i> Night Camp Fire</span>
+                            <span class="btn btn-outline btn-sm m-1"><i class="fa-solid fa-heart"></i> Honeymoon Special</span>
+                        </div>
+
+                        <div class="booking-cta mt-5">
+                            <a href="cotagebooking.html?cottage=Kodaikanal%20Cottage" class="btn btn-primary btn-lg btn-ripple">Book Now</a>
+                        </div>
+                    </div>
+
+                    <div class="info-card scroll-reveal-right">
+                        <div class="info-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h4>Location & Address</h4>
+                                <p>Near Kodaikanal Lake, <br>Kodaikanal, Tamil Nadu.</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-house-chimney"></i>
+                            <div>
+                                <h4>Conveniences</h4>
+                                <p>Perfect for Family, Friends Get Together, and Night Camp experiences.</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-car"></i>
+                            <div>
+                                <h4>Accessibility</h4>
+                                <p>Easy access for all vehicles with private parking facility.</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-headset"></i>
+                            <div>
+                                <h4>24/7 Support</h4>
+                                <p>Dedicated staff available for any assistance during your stay.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Section -->
+                <div class="carousel-container">
+                    <h3 class="text-center mb-4" style="color: var(--white);">Gallery</h3>
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Images will be injected/listed here -->
+                        <img src="assets/Image for RTT/IMG-20260324-WA0000.jpg.jpeg" alt="Cottage View 1" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0001.jpg.jpeg" alt="Cottage View 2" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0002.jpg.jpeg" alt="Cottage View 3" loading="lazy">
+                        <!-- Duplicate for seamless loop -->
+                        <img src="assets/Image for RTT/IMG-20260324-WA0000.jpg.jpeg" alt="Cottage View 1" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0001.jpg.jpeg" alt="Cottage View 2" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0002.jpg.jpeg" alt="Cottage View 3" loading="lazy">
+                    </div>
+                </div>
+                <!-- Experience Paradise Carousel -->
+                <div class="carousel-container" style="margin-top: 80px;">
+                    <h3 class="text-center mb-4" style="color: var(--white);">Experience our paradise of Kodaikanal</h3>
+                    <div class="carousel-track paradise-track">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0000.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0001.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0002.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0003.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0004.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0005.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0006.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0007.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0008.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0009.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0010.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0011.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0012.jpg (1).jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0012.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0013.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0014.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0015.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0016.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0017.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0018.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0019.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0020.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0021.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0022.jpg (1).jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0022.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0023.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0024.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0025.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0026.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <!-- Duplicate for seamless loop -->
+                        <img src="assets/Image for RTT/IMG-20260324-WA0000.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0001.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0002.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0003.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0004.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0005.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0006.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0007.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0008.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0009.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0010.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0011.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0012.jpg (1).jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0012.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0013.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0014.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0015.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0016.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0017.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0018.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0019.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0020.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0021.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0022.jpg (1).jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0022.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0023.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0024.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0025.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                        <img src="assets/Image for RTT/IMG-20260324-WA0026.jpg.jpeg" alt="Paradise Image" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content text-center">
+            <h3 class="footer-logo">Rukku Travels</h3>
+            <p>Your premium travel partner in Tamil Nadu.</p>
+            <div class="social-links mt-3">
+                <a href="https://www.instagram.com/rukkutravels_dindigul?igsh=MWUzM3dqNDk4Y2owMQ==" target="_blank"
+                    rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="footer-bottom mt-4">
+                <p>&copy; 2026 Rukku Travels. All Rights Reserved.<br>
+                    Crafted by
+                    <a href="https://thalirxstudio.netlify.app/" target="_blank" rel="noopener noreferrer">
+                        ThalirX Studio
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        // Simple manual scroll logic to match the 2-second requirement if animation isn't preferred
+        // But the user requested "move left to right 2 sec image freas and move to right side"
+        // This usually means a "stepped" carousel.
+        
+        const track = document.getElementById('carouselTrack');
+        let index = 0;
+        const imgWidth = 420; // 400 width + 20 gap
+        const totalImages = 3;
+
+        function nextSlide() {
+            index++;
+            if (index >= totalImages) {
+                // Reset to start without animation for seamless feel
+                track.style.transition = 'none';
+                index = 0;
+                track.style.transform = `translateX(0)`;
+                // Force reflow
+                track.offsetHeight;
+                // Continue as normal
+                setTimeout(nextSlide, 2000);
+            } else {
+                track.style.transition = 'transform 0.8s ease-in-out';
+                track.style.transform = `translateX(-${index * imgWidth}px)`;
+                setTimeout(nextSlide, 2000);
+            }
+        }
+
+        // Start the stepped animation
+        // setTimeout(nextSlide, 2000);
+
+        // However, the CSS animation I added initially (infinite scroll) is smoother for "auto-moving".
+        // Let's refine the CSS animation to be 2s per image.
+    </script>
+</body>
+
+</html>

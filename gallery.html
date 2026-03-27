@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel & Cottage Gallery | Rukku Travels</title>
+    <meta name="description" content="Explore visually stunning stories from our luxury trips, spiritual tours, and premium Kodaikanal cottage stays across Tamil Nadu with Rukku Travels.">
+    <meta name="keywords" content="rukku travels gallery, kodaikanal cottage photos, dindigul travel agency photos, hill station pictures tamil nadu, luxury travel tamil nadu">
+    <meta name="author" content="thalirxtech">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rukku-travels.com/gallery.html">
+    <meta property="og:site_name" content="Rukku Travels">
+    <meta property="og:title" content="Travel & Cottage Gallery | Rukku Travels">
+    <meta property="og:description" content="Visual stories of our recent premium trips and Kodaikanal cottage stays.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://rukku-travels.com/assets/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .gallery-page-section {
+            padding: 150px 0 100px;
+            background: var(--black-bg);
+            min-height: 100vh;
+        }
+
+        .gallery-masonry {
+            columns: 3 300px;
+            column-gap: 20px;
+            margin-top: 50px;
+        }
+
+        .gallery-item {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--trans-medium);
+            break-inside: avoid;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--trans-slow);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+            border-color: var(--gold-primary);
+            box-shadow: var(--shadow-heavy);
+            z-index: 10;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(44, 15, 74, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: var(--trans-fast);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay i {
+            color: var(--gold-primary);
+            font-size: 2rem;
+            transform: scale(0.5);
+            transition: var(--trans-fast);
+        }
+
+        .gallery-item:hover .gallery-overlay i {
+            transform: scale(1);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sparkles-container"></div>
+
+    <header class="header scrolled">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><img src="assets/images/logo.png" alt="RT Logo"></span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About Us</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#packages" class="nav-link">Packages</a></li>
+                    <li><a href="index.html#gallery" class="nav-link active">Gallery</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <a href="booking.html" class="btn btn-primary btn-ripple">Book Your Travel</a>
+                <button class="mobile-toggle"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery-page-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-badge">Visual Stories</span>
+                    <h2 class="section-title text-white">Our Recent Trips</h2>
+                </div>
+
+                <div class="gallery-masonry" id="gallery-masonry-container">
+                    <!-- Gallery items will be automatically injected here from the assets/images/galary folder -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content text-center">
+            <h3 class="footer-logo">Rukku Travels</h3>
+            <p>Your premium travel partner in Tamil Nadu.</p>
+            <div class="social-links mt-3">
+                <a href="https://www.instagram.com/rukkutravels_dindigul?igsh=MWUzM3dqNDk4Y2owMQ==" target="_blank"
+                    rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="footer-bottom mt-4">
+                <p>&copy; 2026 Rukku Travels. All Rights Reserved.<br>
+                    Crafted by
+                    <a href="https://thalirxstudio.netlify.app/" target="_blank" rel="noopener noreferrer">
+                        ThalirX Studio
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close"><i class="fa-solid fa-xmark"></i></span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <!-- GSAP / Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

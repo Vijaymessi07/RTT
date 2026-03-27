@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Premium Kodaikanal Cottages | Rukku Travels</title>
+    <meta name="description" content="Confirm your premium Kodaikanal cottage booking securely with Rukku Travels. Enjoy misty mountains, exceptional hospitality, and personalized car packages.">
+    <meta name="keywords" content="kodaikanal cottage booking online, best cottages in kodaikanal booking, premium stay kodaikanal, book cottage in kodaikanal, rukku travels">
+    <meta name="author" content="thalirxtech">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rukku-travels.com/cotagebooking.html">
+    <meta property="og:site_name" content="Rukku Travels">
+    <meta property="og:title" content="Book Premium Kodaikanal Cottages | Rukku Travels">
+    <meta property="og:description" content="Secure your exclusive stay in the misty mountains of Kodaikanal with Rukku Travels.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://rukku-travels.com/assets/images/Kodi/main.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .booking-section {
+            padding: 150px 0 100px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .booking-form-wrapper {
+            background: var(--dark-surface);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-heavy);
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+        }
+
+        .booking-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .booking-header h1 {
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        .booking-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .booking-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .input-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .input-group input,
+        .input-group textarea {
+            width: 100%;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: var(--white);
+            font-family: var(--font-body);
+            transition: var(--trans-fast);
+            font-size: 1rem;
+        }
+
+        .input-group input:focus,
+        .input-group textarea:focus {
+            outline: none;
+            border-color: var(--gold-primary);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 10px rgba(238, 160, 22, 0.1);
+        }
+
+        ::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+            opacity: 0.6;
+            cursor: pointer;
+        }
+
+        .success-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--dark-surface);
+            border-radius: 20px;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .success-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .success-overlay i {
+            font-size: 4rem;
+            color: #25D366;
+            margin-bottom: 20px;
+        }
+
+        .btn-back {
+            background: transparent;
+            color: var(--gold-primary);
+            border: 1px solid var(--gold-primary);
+        }
+
+        @media (max-width: 768px) {
+            .booking-form {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sparkles-container"></div>
+
+    <header class="header scrolled">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><img src="assets/images/logo.png" alt="RT Logo"></span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="available-cottages.html" class="nav-link">Cottages</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <a href="index.html#contact" class="btn btn-primary btn-ripple">Contact Us</a>
+                <button class="mobile-toggle"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="booking-section">
+            <div class="container">
+                <div class="booking-form-wrapper">
+                    <div class="booking-header">
+                        <h1>Book Your Cottage</h1>
+                        <p>Experience a premium stay. Fill in the details to book now.</p>
+                    </div>
+
+                    <form id="cottageBookingForm" class="booking-form">
+                        <div class="input-group full-width">
+                            <label for="c_cottage">Selected Cottage</label>
+                            <input type="text" id="c_cottage" value="Kodaikanal Cottage" readonly style="background: rgba(238, 160, 22, 0.1); border-color: var(--gold-primary);">
+                        </div>
+                        <div class="input-group">
+                            <label for="c_name">Full Name *</label>
+                            <input type="text" id="c_name" placeholder="Your Name" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="c_phone">Phone Number *</label>
+                            <input type="tel" id="c_phone" placeholder="Your Number" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="c_email">Email Address *</label>
+                            <input type="email" id="c_email" placeholder="Your Email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="c_checkin">Check-in Date *</label>
+                            <input type="date" id="c_checkin" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="c_checkout">Check-out Date *</label>
+                            <input type="date" id="c_checkout" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="c_adults">Number of Adults *</label>
+                            <input type="number" id="c_adults" placeholder="Adults" min="1" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="c_children">Number of Children</label>
+                            <input type="number" id="c_children" placeholder="Children" min="0" value="0">
+                        </div>
+                        <div class="input-group full-width">
+                            <label for="c_message">Special Message / Requirements</label>
+                            <textarea id="c_message" rows="4" placeholder="Any special requests?"></textarea>
+                        </div>
+
+                        <div class="input-group full-width" style="margin-top: 10px;">
+                            <button type="submit" class="btn btn-primary btn-full btn-ripple"
+                                style="font-size: 1.1rem; padding: 18px;">Confirm Booking via WhatsApp</button>
+                        </div>
+                    </form>
+
+                    <div class="success-overlay" id="successOverlay">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <h2>Booking Request Sent!</h2>
+                        <p>Redirecting to WhatsApp to complete your booking...</p>
+                        <a href="index.html" class="btn btn-back mt-4">Return to Home</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content text-center">
+            <h3 class="footer-logo">Rukku Travels</h3>
+            <p>Your premium travel partner in Tamil Nadu.</p>
+            <div class="social-links mt-3">
+                <a href="https://www.instagram.com/rukkutravels_dindigul?igsh=MWUzM3dqNDk4Y2owMQ==" target="_blank"
+                    rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="footer-bottom mt-4">
+                <p>&copy; 2026 Rukku Travels. All Rights Reserved.<br>
+                    Crafted by
+                    <a href="https://thalirxstudio.netlify.app/" target="_blank" rel="noopener noreferrer">
+                        ThalirX Studio
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Handle URL parameter for cottage name
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const cottage = urlParams.get('cottage');
+            if (cottage) {
+                document.getElementById('c_cottage').value = cottage;
+            }
+        });
+
+        document.getElementById('cottageBookingForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const cottage = document.getElementById('c_cottage').value.trim();
+            const name = document.getElementById('c_name').value.trim();
+            const phone = document.getElementById('c_phone').value.trim();
+            const email = document.getElementById('c_email').value.trim();
+            const checkin = document.getElementById('c_checkin').value;
+            const checkout = document.getElementById('c_checkout').value;
+            const adults = document.getElementById('c_adults').value;
+            const children = document.getElementById('c_children').value;
+            const message = document.getElementById('c_message').value.trim();
+
+            const waMessage = `Hello Rukku Travels, I want to book a Cottage!
+            
+Selected Cottage: ${cottage}
+            
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+
+Check-in: ${checkin}
+Check-out: ${checkout}
+
+Guests:
+Adults: ${adults}
+Children: ${children}
+
+Message: ${message}`;
+
+            const encodedMessage = encodeURIComponent(waMessage);
+            const whatsappNumber = "916382494746";
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+            window.open(whatsappURL, "_blank");
+            document.getElementById('successOverlay').classList.add('active');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
