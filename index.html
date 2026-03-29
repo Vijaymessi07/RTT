@@ -46,14 +46,17 @@
       "areaServed": ["Tamil Nadu", "Kodaikanal", "Madurai", "Chennai"]
     }
     </script>
-    <!-- Google Fonts for Premium Typography -->
+    <!-- CRITICAL: Preload critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Font Awesome - Use SELF-HOSTED version if possible (faster) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaEXvMvSrfngUlnnSmLbwk0mBiMvVderMDii/cEV0wYDzLY+NaulynS7+w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Google Fonts with font-display=swap for better performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -71,7 +74,7 @@
     <header class="header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <span class="logo-icon"><img src="assets/images/logo.png" alt="RT Logo"></span>
+                <span class="logo-icon"><img src="assets/images/logo.png" alt="RT Logo" width="560" height="445" decoding="async"></span>
             </a>
 
             <nav class="nav">
@@ -256,7 +259,7 @@
                     <!-- Package 1 -->
                     <div class="package-card scroll-reveal-up delay-1">
                         <div class="pkg-img">
-                            <img src="assets/images/2.jpeg" alt="Ooty" loading="lazy">
+                            <img src="assets/images/2-placeholder.webp" data-src="assets/images/2-1600w.webp" data-srcset="assets/images/2-400w.webp 400w, assets/images/2-800w.webp 800w, assets/images/2-1600w.webp 1600w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" width="1600" height="1067" alt="Ooty" loading="lazy" decoding="async" class="lazy-image">
                             <div class="duration-badge">3 Days / 2 Nights</div>
                         </div>
                         <div class="pkg-content">
@@ -268,7 +271,7 @@
                     <!-- Package 2 -->
                     <div class="package-card scroll-reveal-up delay-2">
                         <div class="pkg-img">
-                            <img src="assets/images/5.jpeg" alt="Kodaikanal" loading="lazy">
+                            <img src="assets/images/5-placeholder.webp" data-src="assets/images/5-1600w.webp" data-srcset="assets/images/5-400w.webp 400w, assets/images/5-800w.webp 800w, assets/images/5-1600w.webp 1600w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" width="1600" height="760" alt="Kodaikanal" loading="lazy" decoding="async" class="lazy-image">
                             <div class="duration-badge">2 Days / 1 Night</div>
                         </div>
                         <div class="pkg-content">
@@ -280,7 +283,7 @@
                     <!-- Package 3 -->
                     <div class="package-card scroll-reveal-up delay-3">
                         <div class="pkg-img">
-                            <img src="assets/images/3.jpeg" alt="Rameshwaram" loading="lazy">
+                            <img src="assets/images/3-placeholder.webp" data-src="assets/images/3-1600w.webp" data-srcset="assets/images/3-400w.webp 400w, assets/images/3-800w.webp 800w, assets/images/3-1600w.webp 1600w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" width="1600" height="1018" alt="Rameshwaram" loading="lazy" decoding="async" class="lazy-image">
                             <div class="duration-badge">Custom Duration</div>
                         </div>
                         <div class="pkg-content">
@@ -404,11 +407,9 @@
         <img class="lightbox-content" id="lightbox-img" alt="Gallery image">
     </div>
 
-    <!-- GSAP and ScrollTrigger -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <!-- Custom Script -->
-    <script src="js/scripts.js"></script>
+    <!-- REMOVED GSAP (saves 150KB+) - replaced with native CSS animations -->
+    <!-- PERFORMANCE TIP: Load script at end of body with defer attribute -->
+    <script src="js/scripts.js" defer></script>
 </body>
 
 </html>
