@@ -192,22 +192,22 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- Dynamic Background Loading for Hero ---
     const heroBgContainer = document.getElementById('hero-bg-container');
     if (heroBgContainer) {
-        let heroImageIndex = 1;
-        let loadedHeroSlides = [];
+        const preRenderedSlide = heroBgContainer.querySelector('.hero-slide');
+        let loadedHeroSlides = preRenderedSlide ? [preRenderedSlide] : [];
+        let heroImageIndex = 2; // Start loading from slide 2
         let maxHeroFails = 1;
         let currentHeroFails = 0;
+        const isMobile = window.innerWidth <= 768;
+        const suffix = isMobile ? '-800w.webp' : '-1600w.webp';
 
         function tryLoadHeroImage(index) {
-            const imgPath = `assets/images/${index}.jpeg`;
+            const imgPath = `assets/images/${index}${suffix}`;
             const img = new Image();
             img.decoding = 'async';
             
             img.onload = () => {
                 const slide = document.createElement('div');
                 slide.className = 'hero-slide';
-                if (loadedHeroSlides.length === 0) {
-                    slide.classList.add('active', 'anim-zoom');
-                }
                 slide.style.backgroundImage = `url('${imgPath}')`;
                 heroBgContainer.appendChild(slide);
                 loadedHeroSlides.push(slide);
@@ -218,7 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
             
             img.onerror = () => {
                 currentHeroFails++;
-                if (currentHeroFails < maxHeroFails && index < 20) {
+                if (currentHeroFails < maxHeroFails && index < 10) {
                     tryLoadHeroImage(index + 1);
                 } else {
                     initHeroSlider();
@@ -255,22 +255,28 @@ document.addEventListener("DOMContentLoaded", () => {
         let currentGalleryFails = 0;
 
         function tryLoadGalleryImage(index) {
-            const imgPath = `assets/images/galary/${index}.jpeg`;
+            // Probe with small 400w WebP to save bandwidth & optimize loading check
+            const probePath = `assets/images/galary/${index}-400w.webp`;
             const img = new Image();
             
             img.onload = () => {
                 const item = document.createElement('div');
                 item.className = 'gallery-item scroll-reveal-up'; 
                 
+                // Native picture tag handling responsive webp resolution & fallback to JPEG
                 item.innerHTML = `
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800'%3E%3Crect width='100%25' height='100%25' fill='%231a052e'/%3E%3C/svg%3E" data-src="${imgPath}" width="1200" height="800" alt="Gallery Image ${index}" loading="lazy" decoding="async" class="lazy-image">
+                    <picture>
+                        <source srcset="assets/images/galary/${index}-400w.webp 400w, assets/images/galary/${index}-800w.webp 800w, assets/images/galary/${index}-1600w.webp 1600w" type="image/webp">
+                        <source srcset="assets/images/galary/${index}.jpeg" type="image/jpeg">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800'%3E%3Crect width='100%25' height='100%25' fill='%231a052e'/%3E%3C/svg%3E" data-src="assets/images/galary/${index}-400w.webp" width="1200" height="800" alt="Gallery Image ${index}" loading="lazy" decoding="async" class="lazy-image">
+                    </picture>
                     <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
                 `;
                 
-                // Add click listener for lightbox
+                // Add click listener for lightbox to open high-quality WebP
                 item.addEventListener('click', () => {
                     if (window.openLightbox) {
-                        window.openLightbox(imgPath);
+                        window.openLightbox(`assets/images/galary/${index}-1600w.webp`);
                     }
                 });
                 
@@ -296,7 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             };
             
-            img.src = imgPath;
+            img.src = probePath;
         }
 
         tryLoadGalleryImage(galleryIndex);

@@ -52,11 +52,27 @@
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     
     <!-- Font Awesome - Use SELF-HOSTED version if possible (faster) -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaEXvMvSrfngUlnnSmLbwk0mBiMvVderMDii/cEV0wYDzLY+NaulynS7+w==" crossorigin="anonymous" referrerpolicy="no-referrer">
     
     <!-- Google Fonts with font-display=swap for better performance -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Responsive Hero Background Preloads -->
+    <link rel="preload" href="assets/images/1-1600w.webp" as="image" type="image/webp" media="(min-width: 769px)" fetchpriority="high">
+    <link rel="preload" href="assets/images/1-800w.webp" as="image" type="image/webp" media="(max-width: 768px)" fetchpriority="high">
+    
+    <!-- Responsive Hero Background Styles for LCP Optimization -->
+    <style>
+        .hero-bg .hero-slide {
+            background-image: url('assets/images/1-1600w.webp');
+        }
+        @media (max-width: 768px) {
+            .hero-bg .hero-slide {
+                background-image: url('assets/images/1-800w.webp');
+            }
+        }
+    </style>
+
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -74,7 +90,7 @@
     <header class="header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <span class="logo-icon"><img src="assets/images/logo.png" alt="RT Logo" width="560" height="445" decoding="async"></span>
+                <span class="logo-icon"><img src="assets/images/logo-400w.webp" alt="RT Logo" width="560" height="445" decoding="async"></span>
             </a>
 
             <nav class="nav">
@@ -98,6 +114,8 @@
         <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-bg" id="hero-bg-container">
+                <!-- First slide pre-rendered to avoid blank screen and optimize LCP -->
+                <div class="hero-slide active anim-zoom"></div>
             </div>
             <div class="hero-overlay"></div>
             <div class="container hero-content text-center">

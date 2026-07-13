@@ -16,6 +16,51 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://rukku-travels.com/assets/images/Kodi/main.jpeg">
     <meta name="twitter:card" content="summary_large_image">
+    <!-- JSON-LD Schema for AI Knowledge Graphs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "@id": "https://rukku-travels.com/kodaikanal-cottage.html",
+      "name": "Kodaikanal Cottage - Rukku Travels",
+      "description": "Premium luxury cottage stay in Kodaikanal, near Kodaikanal Lake. Ideal for family tours, honeymoons, and group get-togethers. Managed by Rukku Travels.",
+      "image": "https://rukku-travels.com/assets/images/Kodi/main-800w.webp",
+      "url": "https://rukku-travels.com/kodaikanal-cottage.html",
+      "telephone": "+91-9976000500",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kodaikanal",
+        "addressRegion": "Tamil Nadu",
+        "addressCountry": "IN"
+      },
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Night Camp Fire",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Family Friendly",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Private Parking",
+          "value": true
+        }
+      ],
+      "parentOrganization": {
+        "@type": "TravelAgency",
+        "name": "Rukku Travels",
+        "url": "https://rukku-travels.com"
+      }
+    }
+    </script>
+    <!-- Preload Hero Image -->
+    <link rel="preload" href="assets/images/Kodi/main-800w.webp" as="image" type="image/webp" media="(min-width: 481px)" fetchpriority="high">
+    <link rel="preload" href="assets/images/Kodi/main-400w.webp" as="image" type="image/webp" media="(max-width: 480px)" fetchpriority="high">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -118,6 +163,7 @@
             gap: 20px;
             width: max-content;
             animation: slide 20s linear infinite;
+            will-change: transform; /* Promote to GPU layer for smoother scroll & lower INP */
         }
 
         .carousel-track:hover {
@@ -171,7 +217,7 @@
     <header class="header scrolled">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <span class="logo-icon"><img src="assets/images/logo.png" alt="RT Logo"></span>
+                <span class="logo-icon"><img src="assets/images/logo-400w.webp" alt="RT Logo"></span>
             </a>
             <nav class="nav">
                 <ul class="nav-list">
@@ -190,7 +236,12 @@
 
     <main>
         <section class="cottage-hero">
-            <img src="assets/images/Kodi/main.jpeg" alt="Kodaikanal Cottage" class="hero-main-img" fetchpriority="high" decoding="sync">
+            <picture>
+                <source media="(max-width: 480px)" srcset="assets/images/Kodi/main-400w.webp" type="image/webp">
+                <source srcset="assets/images/Kodi/main-800w.webp" type="image/webp">
+                <source srcset="assets/images/Kodi/main.jpeg" type="image/jpeg">
+                <img src="assets/images/Kodi/main.jpeg" alt="Kodaikanal Cottage" class="hero-main-img" fetchpriority="high" decoding="sync">
+            </picture>
             <div class="hero-overlay-content">
                 <span class="section-badge">Premium Experience</span>
                 <h1>Kodaikanal Cottage</h1>
@@ -252,81 +303,80 @@
 
                 <!-- Carousel Section -->
                 <div class="carousel-container">
-                    <h3 class="text-center mb-4" style="color: var(--white);">Gallery</h3>
                     <div class="carousel-track" id="carouselTrack">
                         <!-- Images will be injected/listed here -->
-                        <img src="assets/Image for RTT/IMG-20260324-WA0000.jpg.jpeg" alt="Cottage View 1" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0001.jpg.jpeg" alt="Cottage View 2" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0002.jpg.jpeg" alt="Cottage View 3" loading="lazy" width="400" height="250" decoding="async">
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0000.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0000.jpg.jpeg" alt="Cottage View 1" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0001.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0001.jpg.jpeg" alt="Cottage View 2" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0002.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0002.jpg.jpeg" alt="Cottage View 3" loading="lazy" width="400" height="250" decoding="async"></picture>
                         <!-- Duplicate for seamless loop -->
-                        <img src="assets/Image for RTT/IMG-20260324-WA0000.jpg.jpeg" alt="Cottage View 1" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0001.jpg.jpeg" alt="Cottage View 2" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0002.jpg.jpeg" alt="Cottage View 3" loading="lazy" width="400" height="250" decoding="async">
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0000.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0000.jpg.jpeg" alt="Cottage View 1" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0001.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0001.jpg.jpeg" alt="Cottage View 2" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0002.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0002.jpg.jpeg" alt="Cottage View 3" loading="lazy" width="400" height="250" decoding="async"></picture>
                     </div>
                 </div>
                 <!-- Experience Paradise Carousel -->
                 <div class="carousel-container" style="margin-top: 80px;">
-                    <h3 class="text-center mb-4" style="color: var(--white);">Experience our paradise of Kodaikanal</h3>
+
                     <div class="carousel-track paradise-track">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0000.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0001.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0002.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0003.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0004.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0005.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0006.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0007.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0008.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0009.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0010.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0011.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0012.jpg (1).jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0012.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0013.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0014.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0015.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0016.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0017.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0018.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0019.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0020.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0021.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0022.jpg (1).jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0022.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0023.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0024.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0025.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0026.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0000.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0000.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0001.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0001.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0002.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0002.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0003.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0003.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0004.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0004.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0005.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0005.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0006.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0006.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0007.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0007.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0008.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0008.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0009.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0009.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0010.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0010.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0011.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0011.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0012.jpg (1)-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0012.jpg (1).jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0012.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0012.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0013.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0013.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0014.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0014.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0015.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0015.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0016.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0016.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0017.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0017.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0018.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0018.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0019.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0019.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0020.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0020.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0021.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0021.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0022.jpg (1)-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0022.jpg (1).jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0022.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0022.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0023.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0023.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0024.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0024.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0025.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0025.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0026.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0026.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
                         <!-- Duplicate for seamless loop -->
-                        <img src="assets/Image for RTT/IMG-20260324-WA0000.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0001.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0002.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0003.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0004.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0005.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0006.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0007.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0008.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0009.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0010.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0011.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0012.jpg (1).jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0012.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0013.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0014.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0015.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0016.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0017.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0018.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0019.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0020.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0021.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0022.jpg (1).jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0022.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0023.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0024.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0025.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
-                        <img src="assets/Image for RTT/IMG-20260324-WA0026.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async">
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0000.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0000.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0001.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0001.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0002.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0002.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0003.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0003.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0004.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0004.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0005.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0005.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0006.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0006.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0007.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0007.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0008.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0008.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0009.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0009.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0010.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0010.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0011.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0011.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0012.jpg (1)-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0012.jpg (1).jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0012.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0012.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0013.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0013.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0014.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0014.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0015.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0015.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0016.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0016.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0017.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0017.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0018.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0018.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0019.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0019.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0020.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0020.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0021.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0021.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0022.jpg (1)-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0022.jpg (1).jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0022.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0022.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0023.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0023.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0024.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0024.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0025.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0025.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
+                        <picture><source srcset="assets/Image for RTT/IMG-20260324-WA0026.jpg-400w.webp" type="image/webp"><img src="assets/Image for RTT/IMG-20260324-WA0026.jpg.jpeg" alt="Paradise Image" loading="lazy" width="400" height="250" decoding="async"></picture>
                     </div>
                 </div>
             </div>

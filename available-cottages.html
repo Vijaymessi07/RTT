@@ -16,6 +16,24 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://rukku-travels.com/assets/images/Kodi/main.jpeg">
     <meta name="twitter:card" content="summary_large_image">
+    <!-- JSON-LD Schema for AI Knowledge Graphs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Available Cottages in Kodaikanal",
+      "description": "Curated selection of luxury and premium cottages in Kodaikanal, Tamil Nadu, offered by Rukku Travels.",
+      "url": "https://rukku-travels.com/available-cottages.html",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://rukku-travels.com/kodaikanal-cottage.html",
+          "name": "Kodaikanal Cottage"
+        }
+      ]
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -123,7 +141,7 @@
     <header class="header scrolled">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <span class="logo-icon"><img src="assets/images/logo.png" alt="RT Logo"></span>
+                <span class="logo-icon"><img src="assets/images/logo-400w.webp" alt="RT Logo"></span>
             </a>
             <nav class="nav">
                 <ul class="nav-list">
@@ -155,7 +173,10 @@
                     <div class="cottage-card scroll-reveal-up">
                         <div class="cottage-badge">Most Popular</div>
                         <div class="cottage-img">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect width='100%25' height='100%25' fill='%231a052e'/%3E%3C/svg%3E" data-src="assets/images/Kodi/main.jpeg" alt="Kodaikanal Cottage" width="800" height="600" loading="lazy" decoding="async" class="lazy-image">
+                            <picture>
+                                <source srcset="assets/images/Kodi/main-400w.webp 400w, assets/images/Kodi/main-800w.webp 800w" type="image/webp">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect width='100%25' height='100%25' fill='%231a052e'/%3E%3C/svg%3E" data-src="assets/images/Kodi/main.jpeg" alt="Kodaikanal Cottage" width="800" height="600" loading="lazy" decoding="async" class="lazy-image">
+                            </picture>
                         </div>
                         <div class="cottage-info">
                             <h3>Kodaikanal Cottage</h3>
